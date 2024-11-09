@@ -1,0 +1,25 @@
+services:
+  python:
+    container_name: autotrust-rcengine-python
+    build:
+      dockerfile: docker/python/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+        - .:/app
+    networks:
+        - autotrust-network
+  ollama:
+    container_name: autotrust-rcengine-ollama
+    build:
+      dockerfile: docker/ollama/Dockerfile
+    ports:
+      - "11434:11434"
+    networks:
+        - autotrust-network
+    volumes:
+      - .:/app
+
+networks:
+    autotrust-network:
+        driver: bridge
