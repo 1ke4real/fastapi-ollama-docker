@@ -36,16 +36,18 @@ AutoTrust RC Engine is an AI-powered API project developed using [FastAPI](https
     make stop
     ```
 5.	Clean Up Docker Resources:
-   ```bash
-   make clean
-   ```
+    
+       ```bash
+       make clean
+       ```
 ## API Usage
 
 ### Main Endpoint
 
-POST /chat
-	•	Description: Sends a prompt to the llama3.2 model via Ollama and receives a response.
-	•	Request JSON:
+- POST /chat
+    Description: Sends a prompt to the llama3.2 model via Ollama and receives a response.
+	  
+- Request JSON:
 
 ```json
 {
@@ -53,8 +55,7 @@ POST /chat
 }
 ```
 
-    •	Response JSON:
-
+- Response JSON:
 ```json
 {
     "response": "The sky appears blue due to the scattering of sunlight by the atmosphere..."
@@ -66,7 +67,6 @@ Request Example
 curl -X POST "http://localhost:8000/chat" -H "Content-Type: application/json" -d '{"prompt": "Why is the sky blue?"}'
 ```
 
-Container Configuration
-
-    •   FastAPI runs in a dedicated Python container and exposes the API on port 8000.
-    •   Ollama runs the llama3.2 model in a separate container, accessible via HTTP requests from the FastAPI container.
+Container Configuration:
+-   FastAPI runs in a dedicated Python container and exposes the API on port 8000.
+-   Ollama runs the llama3.2 model in a separate container, accessible via HTTP requests from the FastAPI container.
