@@ -15,10 +15,10 @@ async def root():
 async def chat(request: PromptRequest):
     url = "http://autotrust-rcengine-ollama:11434/api/generate"
     req = requests.post(url, json={
-        "model": "llama3.2",
+        "model": "mistral",
         "prompt": request.prompt,
         "stream": False
     })
     res = req.json()
 
-    return Response(content=res['response'], media_type="application/json")
+    return {"response": res['response']}
