@@ -1,6 +1,4 @@
-# AutoTrust RC Engine: AI API with FastAPI and Ollama
-
-AutoTrust RC Engine is an AI-powered API project developed using [FastAPI](https://fastapi.tiangolo.com/) and [Ollama](https://ollama.com/), running in a Dockerized environment. This project utilizes the `llama3.2` model, which is trained on automotive data, to deliver responses through an API interface.
+#FastAPI and Ollama with Docker.
 
 ## Prerequisites
 
